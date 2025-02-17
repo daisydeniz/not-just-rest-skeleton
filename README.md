@@ -2,6 +2,18 @@
 Skeleton Rest With PHP 8.4 / Laravel 11
 ## Install Project
 
+*Clone repository*
+````sh
+  git clone https://github.com/daisydeniz/not-just-rest-skeleton.git
+````
+---
+*Work in directory*
+````sh
+  cd not-just-rest-skeleton
+````
+---
+
+
 *copy default env*
 ````sh
   cp .env.example .env
@@ -31,7 +43,7 @@ Skeleton Rest With PHP 8.4 / Laravel 11
   sail artisan migrate:fresh --seed
 ````
 
-> **to get Bearer token :** 
+*Login creds:*
 ```json
 {
 "email": "user@foo.bar",
@@ -55,12 +67,12 @@ Skeleton Rest With PHP 8.4 / Laravel 11
 
 
 
-**Generate ide-helper files:** 
+**Generate ide-helper files:**
 ````sh
     sail composer run ide-helper
 ````
 
-## Dev Tools 
+## Tools
 
 [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 
