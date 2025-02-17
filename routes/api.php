@@ -1,11 +1,19 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('v1')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    })->middleware('auth:sanctum');
+
+Route::scopeBindings()->prefix('v1')->middleware('auth:sanctum')->group(function () {
+    require __DIR__ . '/v1/user.php';
 });
+
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+});
+
+
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
 
