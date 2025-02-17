@@ -2,12 +2,9 @@
 
 namespace App\Http\Resources;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\RoleResource;
-use Spatie\Permission\Models\Role;
-use App\Models\User;
-use OpenApi\Attributes as OA;
 
 /**
  * @mixin User

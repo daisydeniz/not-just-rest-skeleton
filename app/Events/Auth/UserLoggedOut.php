@@ -11,4 +11,4 @@ class UserLoggedOut extends BaseEvent
         public readonly User $user,
     ) {
     }
-} 
+}

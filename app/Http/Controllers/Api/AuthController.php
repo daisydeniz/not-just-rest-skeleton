@@ -15,13 +15,11 @@ class AuthController extends BaseApiController
     ) {
     }
 
-
     /**
      * Login
      *
      * @unauthenticated
-     * @param LoginRequest $request
-     * @return AuthResource
+     *
      * @throws ValidationException
      */
     public function login(LoginRequest $request): AuthResource
@@ -34,9 +32,6 @@ class AuthController extends BaseApiController
 
     /**
      * Logout
-     *
-     * @param Request $request
-     * @return void
      */
     public function logout(Request $request): void
     {

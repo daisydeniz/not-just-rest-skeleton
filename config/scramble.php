@@ -52,7 +52,6 @@ return [
          */
         'hide_try_it' => false,
 
-
         /*
          * Use to fetch the credential policy for the Try It feature. Options are: omit, include (default), and same-origin
          */
@@ -74,7 +73,7 @@ return [
      * ```
      */
     'servers' => [
-        'local' => 'http://localhost/api'
+        'local' => 'http://localhost/api',
     ],
 
     'middleware' => [

@@ -13,6 +13,7 @@ enum RoleEnum: string
             'viewAny',
         ];
     }
+
     public function description(): string
     {
         return match ($this) {
