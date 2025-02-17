@@ -16,8 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $roles = collect(RoleEnum::cases())->mapWithKeys(function (RoleEnum $role) {
             $permissions = collect($role->defaultPermissions())
-                ->map(fn(string $permission) => Permission::firstOrCreate(['name' => $permission]));
-
+                ->map(fn (string $permission) => Permission::firstOrCreate(['name' => $permission]));
 
             $roleModel = Role::create([
                 'name' => $role->value,
