@@ -1,49 +1,47 @@
-# not-just-rest-skeleton
-Skeleton Rest With PHP 8.4 / Laravel 11
+# Assessment
+Rest Api for assessment
+PHP 8.4 / Laravel 11
 ## Install Project
-
-*Clone repository*
+**To fetch assessment repository**
 ````sh
-  git clone https://github.com/daisydeniz/not-just-rest-skeleton.git
+git clone https://github.com/daisydeniz/not-just-rest-skeleton.git
 ````
----
-*Work in directory*
 ````sh
   cd not-just-rest-skeleton
 ````
----
-
-
-*copy default env*
 ````sh
-  cp .env.example .env
+git checkout assesment
 ````
----
-
-**Docker PHP 8.4 image for composer install**
 ````sh
-    docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v $(pwd):/var/www/html \
-    -w /var/www/html \
-    laravelsail/php84-composer:latest \
-    composer install --ignore-platform-reqs
+cp .env.example .env
 ````
-
+**Docker PHP 8.4 Laravel Sail image for composer install**
+````sh
+docker run --rm \
+-u "$(id -u):$(id -g)" \
+-v $(pwd):/var/www/html \
+-w /var/www/html \
+laravelsail/php84-composer:latest \
+composer install --ignore-platform-reqs
+````
 *alias sale command for ease*
 ````sh
-  alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ````
-*up and run in backround*
+*up and run in background*
 ````sh
-  sail up -d
+sail up -d
 ````
 *Database fresh migration and seeding*
 ````sh
-  sail artisan migrate:fresh --seed
+sail artisan migrate:fresh --seed
+````
+````sh
+sail artisan db:seed --class=AssessmentSeeder
 ````
 
-*Login creds:*
+
+## Login credential for development purpose
 ```json
 {
 "email": "user@foo.bar",
@@ -56,7 +54,7 @@ Skeleton Rest With PHP 8.4 / Laravel 11
 "password": "password"
 }
 ```
-[Login](http://localhost/docs/api#/operations/auth.login)
+[Login Endpoint](http://localhost/docs/api#/operations/auth.login)
 
 ---
 > **Api Url :** [http://localhost/api](http://localhost/api)
@@ -69,7 +67,7 @@ Skeleton Rest With PHP 8.4 / Laravel 11
 
 **Generate ide-helper files:**
 ````sh
-    sail composer run ide-helper
+sail composer run ide-helper
 ````
 
 ## Tools

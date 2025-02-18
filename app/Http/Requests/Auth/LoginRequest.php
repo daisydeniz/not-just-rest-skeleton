@@ -16,12 +16,12 @@ class LoginRequest extends FormRequest
         return [
             /**
              * email
-             * user@example.com
+             * user@foo.bar
              */
             'email' => ['required', 'email'],
             /**
              *password
-             * 123456
+             * password
              */
             'password' => ['required', 'string'],
         ];
