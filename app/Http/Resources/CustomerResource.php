@@ -18,8 +18,6 @@ class CustomerResource extends JsonResource
             'name' => $this->name,
             'since' => $this->since,
             'revenue' => (float) $this->revenue,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ];
     }
 }

@@ -11,7 +11,6 @@ class OrderService extends BaseService
 {
     /**
      * Retrieves orders.
-     *
      */
     public function getOrders(): Collection
     {

@@ -12,6 +12,7 @@ return new class() extends Migration {
             $table->string('name');
             $table->string('since');
             $table->decimal('revenue', 10, 2);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
